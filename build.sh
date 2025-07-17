@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
-buildozer android debug
-mkdir -p output
-cp bin/*.apk output/
-echo "✅ APK собрано. Смотри в папке /app/output"
+
+cd project
+yes | buildozer android debug
+
+mkdir -p /app/output
+cp bin/*.apk /app/output/
+echo "✅ APK собрано. Файл доступен в папке /app/output"
